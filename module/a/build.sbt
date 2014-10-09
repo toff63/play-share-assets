@@ -16,5 +16,5 @@ libraryDependencies ++= Seq(
 packagedArtifacts in publishLocal := {
   val artifacts: Map[sbt.Artifact, java.io.File] = (packagedArtifacts in publishLocal).value
   val assets: java.io.File = (playPackageAssets in Compile).value
-  artifacts + (Artifact(moduleName.value, "asset", "jar", "assets") -> assets)
+  artifacts + (Artifact(moduleName.value, "jar", "jar", "assets") -> assets)
 }
